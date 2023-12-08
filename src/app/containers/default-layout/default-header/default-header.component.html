@@ -1,0 +1,77 @@
+<!--<c-header class="mb-4 d-print-none" position="sticky">-->
+
+<c-container [fluid]="true">
+  <button
+    toggle="visible"
+    cHeaderToggler
+    [cSidebarToggle]="sidebarId"
+    class="ps-1"
+  >
+  <i class="cil-chevron-left " style="color: aliceblue;"></i>
+  <i class="cil-chevron-right" style="color: aliceblue; margin-left: 15px;"></i>
+  </button>
+  <c-header-nav class="d-none d-lg-flex me-auto" style="margin-left: 65px;">
+    <!-- Larger Search input -->
+    <input type="text" placeholder="Search" class="form-control ms-4" style="width: 600px;">
+  </c-header-nav>
+  <c-header-nav class="ms-3">
+    <ng-container *ngTemplateOutlet="userDropdown"></ng-container>
+  </c-header-nav>
+
+</c-container>
+<!--</c-header>-->
+
+<ng-template #userDropdown>
+  <c-dropdown alignment="end" variant="nav-item" style="margin-right: 105px;">
+    <button
+      cButton
+      color=""
+      [caret]="false"
+      cDropdownToggle
+      class="py-0"
+    >
+      <c-avatar
+        cTextColor="primary"
+        shape="rounded-1"
+        size="md"
+        src="./assets/img/avatars/avatar1.png"
+        style="margin-right: 25px;"
+      >
+      </c-avatar>
+      <span class="mt-1 ml-2  "  style="color: aliceblue;">Matheus</span>
+      <i class="cil-chevron-bottom" style="color: aliceblue; margin-left: 25px; margin-bottom: 35px;"></i>
+     
+     
+    </button>
+    <ul cDropdownMenu class="pt-0 pr-5 w-auto">
+      <li></li>
+      <li>
+        <a routerLink="./" cDropdownItem>
+        
+          Private session
+        </a>
+      </li>
+      <li>
+        <a routerLink="./" cDropdownItem>
+          
+          Account
+        </a>
+      </li>
+      <li>
+        <a routerLink="./" cDropdownItem>
+         
+          Settings
+         
+        </a>
+      </li>
+      <li>
+        <a routerLink="./" cDropdownItem>
+         
+          Log out
+        </a>
+      </li>
+      
+    </ul>
+  </c-dropdown>
+</ng-template>
+

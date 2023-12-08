@@ -1,0 +1,10 @@
+
+<!-- c-card.component.html -->
+<c-card style="width: 12rem;">
+  <ng-container *ngTemplateOutlet="imgPlaceholderTemplate; context: { orientation: imageUrl }"></ng-container>
+</c-card>
+
+<ng-template #imgPlaceholderTemplate let-orientation>
+  <img *ngIf="!!imageUrl" [src]="imageUrl" alt="Image cap" class="docs-placeholder-img" width="100%" height="180" />
+
+</ng-template>

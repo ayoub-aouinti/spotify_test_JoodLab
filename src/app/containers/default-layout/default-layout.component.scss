@@ -1,0 +1,29 @@
+:host {
+  ng-scrollbar {
+    --scrollbar-thumb-color: var(--cui-border-color, #999);
+    --scrollbar-track-color: var(--cui-body-color, #fff);
+    --scrollbar-hover-size: calc(var(--scrollbar-size) * 1.5);
+  }
+}
+.px-3{
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+
+#images{
+  margin-top: 190px;
+  align-items: center;
+}
+i{
+  font-size: 30px; 
+  color: #1DB954; 
+  margin-left: 20px;
+}
+
+#square{
+  display: flex; 
+  flex-direction: column; 
+  margin-left: 20px; 
+  align-items: flex-start;
+}
